@@ -44,5 +44,3 @@ Python is an interpreted, high-level, general-purpose programming language.<br/>
 
 
 
-<p align="center">
-<img src="./2.png"></br>
