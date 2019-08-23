@@ -1,0 +1,386 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Aug 22 17:00:37 2019
+
+@author: devyanshitiwari
+"""
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# py codes are interpreated line by line
+print("Hello World")
+print("Devyanshi Tiwari")
+print("x" * 10) # print it 10 times
+# variables
+x=10
+
+print(x)
+x=20
+print(x)
+i=10
+f=12.4
+s='apple'
+b= False # needs to begin with a capital
+print(i,f,s,b)
+name="John Smith"
+age=20
+stat=True
+if stat==True:
+ print("new")
+ 
+    # input always take a string so convert appropraitely
+   name= input("Enter a your name")
+   color=  input("Enter a your fav color")
+   print(name+" likes"+color)
+    
+   bday=input("Enter your Birth year")
+   age=2019-int(bday) # inbuilt function to conver to a int value
+   print("Age: ",age) # not used + as that is only for strings
+   print(type(bday)) # type tell the type of variable
+   
+   wt=input("enter weight")
+   wt=float(wt)*1000
+   print(wt,"kg")
+   
+   s="Devyanshi Tiwari"
+   print(s[0])
+   print(s[-1])
+   print(s[0:3]) # upper bound excluded
+   print(s[4:]) # from 4 till the very end
+   print(s[:6]) # from 0 to 5
+   copy=s[:]
+   print(copy) # clones the variable
+   
+   s=" Devyanshi's Bday" # to print '
+   print(s)
+   s=' " Devyanshi" BDAY' # to print ""
+   print(s)
+   s=''' Hello hi how are you
+   but this is a long 
+   string.'''  # for multi line strings use ''' or """
+   print(s)
+   
+   # FORMATTED STRING - Python uses C-style string formatting to create new, 
+  # formatted strings. The "%" operator is used to format a set of variables enclosed 
+  # in a "tuple" (a fixed size list), together with a format string, 
+   # which contains normal text together with "argument specifiers", special symbols like "%s" and "%d".
+   first="Devyanshi"
+   last="Tiwari"
+   msg=f'{first} [{last}] is a coder' # {}  are placeholders to hold the val of the variable ; f helps to identify formatted string
+   print(msg)
+   
+   # String methods 
+   
+   s=" Pyhton for Beginners"
+   print(len(s)) # return the length 
+   print( s.lower())
+   print(s.upper())
+   print(s) # the above functions do not change the original string
+   print(s.title())
+   # to find something
+   print(s.find('for')) # return the starting point
+   print(s.find('of')) # not present so -1
+   
+   # to replace
+   print(s.replace('for','of'))
+   print(s.replace('is','at')) # prints the original string as fails to find is
+   
+   # in operator
+   print('for' in s) # return true
+   print('ccsa' in s)# return false
+   
+   #  Note: find return the in dex of the required whereas in checks and returns a boolean value
+  
+    # ARITHMETIC OPERATOR
+    print(10/3)
+    print(10//3)  #returns a int 
+    print(10%3)
+    print(2**4) # 2 raised to the power of 4
+    x=10
+    x+=3  # augumented assignment operator
+    print(x)
+    # precedence : brackets,**,mult or div,add or subtract
+    print((2+3)*5**2)
+    # math function
+    print(round(3.67)) # round to nearest int
+    print(round(3.24))
+    print(abs(-4)) 
+    
+    import math as m
+    print(m.ceil(4.6))
+    # refer to math library for a list of math functions
+    
+    # if else
+    hot=True
+    cold=False
+    if hot:
+        print("it is a hot day")
+        print("time for ice cream")
+    elif cold:
+        print(" it is so cold")
+    else:
+        print(" lovely day")
+    
+    # logical operators
+    student=True
+    teacher=True
+    day_issunday=False
+    if student and not day_issunday:
+        print(" Student can use the library")
+    elif teacher or not day_issunday:
+        print(" Teacher can use the librray")
+    else:
+        print ("SORRY")
+    
+   name=input('enter a name')
+   if(len(name)<3):
+       print("len must atleat be 3")
+   elif (len(name)>50):
+       print("len must be not grater than 50")
+   else:
+       print("Valid name")
+        
+
+   wt=input('weight:')
+   ch=input('press g for gram and k for kg')
+   if ch=='g' or ch=='G':
+       print(wt,"gram")
+   if ch=='k' or ch=='K':
+       print(wt,"kg")    
+   
+    # while loop
+   i=1
+   while i<=5:
+       print('*'*i)
+       i=i+1
+   print("DONE")
+   
+  # game
+  chances=3
+  no=9
+  while chances !=0:
+      n=int(input('Enter a number'))
+      if(n==no):
+          print('YOU WIN')
+          break
+      chances=chances-1   
+  if(chances<=0):
+      print("Sorry you loose")
+  # Car game
+     is_start=False
+     is_stop=False
+  while True:
+      var=input('Enter a val:')
+      var=var.upper()
+      
+      if var=="START":
+          if(is_start):
+              print('Already started')
+          else:
+               print('Car started')
+               is_start=True
+      elif var=="STOP":
+          if(is_stop):
+              print('Already stopped')
+          else:
+              print('Car stopped')
+              is_stop=True
+      elif var=="HELP":
+          print('''
+  start- start the car
+  stop-  stop the car
+  quit-  quit 
+  '''              )
+      elif var=="QUIT":
+         break
+     
+      else :
+         print(" INVALID")
+     
+     # for loops
+     for i in "Devyanshi":
+         print(i)
+     for i in["Devyanshi","Shivi","Ram"]:
+         print(i)
+     for i in range(10): # prints 0 to 9
+         print(i)
+     for i in range(10,21):# prints 10 to 20
+         print(i)
+     for i in range(1,21,2):# print from 1 to 20 by skipping 1 place
+         print(i)
+     item=[10,20,30]
+     s=0
+     for i in item:
+          s=s+i
+     print(s) 
+     
+     # Nested loops
+     for i in  range(4):
+         for j in range(4):
+             print(f'({i},{j})')
+     # printing F
+     for i in range(1,6):
+             if i==1 or i==3:
+                 print('X'*5)
+             else:
+                print('X'*2)
+     # printing L   
+     for i in range(1,6):
+             if i==5 :
+                 print('X'*5)
+             else:
+                print('X'*2)        
+      
+        
+     # LISTS
+     names=["Devyanshi","Shivi","Sarah","Jane","Kate"]
+     print(names)
+     print(names[0])
+     print(names[1:4]) # 4 excluded
+     print(names[-1]) # last item printed
+     names[2]="Liz"  # to update
+     print(names)
+     
+     # finding the greates element in a list
+     l=[1,2,45,67,23,98,45,45,89]
+     g=0;
+     for i in l:
+         if(g<i):
+             g=i;
+     print(g)
+     
+     
+     # 2D LIST
+     matrix=[
+           [1,2,3],
+           [4,5,6],
+           [7,8,9]
+             
+             ]
+     print(matrix[0][1]) # prints 2
+     matrix[0][1]=12
+     print(matrix[0][1]) # prints 12
+     
+     for i in range(3): # iterating over a 2d list
+         for j in  range(3):
+             print(matrix[i][j])
+      
+        
+     # List methods
+     l=[2,3,7,9,4,5,5,5,5,6,10]
+     print(l)
+     # to add the end 
+     l.append(12)
+     print(l)
+     # to insert at a spefic place
+     l.insert(2,24) # insert 24 at index 2
+     print(l)
+     l.remove(6)
+     print(l) # removes 6 from the list
+     l.pop() # removes the last item
+     print(l.index(7)) # return the index of 7 in the list
+     print(l)
+     l.sort # sorts the list
+     print(l)
+     l.reverse() # reverse the list
+     print(l)
+     print(l.count(5)) # print the number of occurances of 5
+     j=l.copy() # copies l to j
+     print(j)
+     print(5 in l) # True
+     print(234 in l)# False
+     
+     # removing duplicates from a list
+     l=[1,2,3,3,2,5] # 1,2,3,5
+     temp=[]
+     for i in l:
+         if i  not in temp:
+             temp.append(i)
+     print(temp) 
+     
+     
+
+     # Tuples :immutable ;their value cannot be updated ;use () to define
+     t=(1,2,3,4)
+     print(t[1])
+     
+     # unpacking
+    
+     l=[1,2,3]
+     m=(4,7,6)
+     x,y,z=l # shortcut 
+     print(x) # x=l[0]
+     p,q,r=m
+     print(r) # r=m[2]
+     
+     # dictionaries: for key value pairs ;use{} to define; keys should be unique
+      
+     show={
+             "name":"Peaky Blinders",
+             "channel":"BBC 1",
+             "lang":"English"
+             
+            }
+     print(show)
+     print(show["name"])
+    # print(show["age"]) // will give key error as key does not exist
+     print(show.get("name")) # gets the value at the key
+     print(show.get("age")) # returns none as key dosent exist
+     print(show.get("number",5)) # returns 5 as the key does not exist so 
+     # it returns a default value that we r passing
+     
+     # code to convert a  phone number  to words
+     phone=(input("phone number "))
+     l=len(phone)
+     no={ 1:"one",
+          2:"two",
+          3:"three",
+          4:"four",
+          5:"five",
+          6:"six",
+          7:"seven",
+          8:"eight",
+          9:"nine"
+            
+         }
+     s=""
+     for i in range(0,l):
+         n=int(phone[i])
+         s=s+" "+no.get(n)
+     print(s)
+     
+     # emoji convertor
+     msg=input("your message")
+     words=msg.split(' ') # splits on the basis of space
+     emoji={
+             ":-)":"😀",
+             ":-(":"😞"
+            }
+     m=""         
+     for i in words:
+         m=m+emoji.get(i,i)+" "
+     print(m)   
+     
+     # functions
+     def greet_user():
+         print(" Hello from the function")
+     
+        
+     print("welcome")
+     greet_user()
+     # Note: define the function first before calling it
+     # leave 2 lines after definition of function
+     
+     # PARAMETERS
+     def intro(fname,lname):
+         print(f'Hello {fname} {lname}!')
+     intro('Devyanshi','Tiwari') 
+     # keyword arguments help to increase the readilbility of the program
+     # NOTE: ALWAYS PUT KEYWORD ARG AFTER POSITIONAL
+     # Use keyword arg usually with numerical value
+     # order during keyword arg dosen't matter
+     intro(lname='Tiwari',fname='Devyanshi')
+     intro('Shivi',lname='Tiwari')
+     
