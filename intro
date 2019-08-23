@@ -438,10 +438,32 @@ if stat==True:
     except (TypeError, ZeroDivisionError):
         print("Invalid")
         
-    # raising a error
+    # raising an error
     try:
         a = int(input("Enter a positive integer: "))
         if a <= 0:
            raise ValueError("That is not a positive number!")
     except ValueError as ve:
         print(ve)
+   
+    # classes
+    # use keyword class ;first letter of word starts with a caps
+    # classes can have attributes and methods
+    class Point:
+        def draw(self):
+            print("Drawing")
+        def move(self):
+            print("Moving")
+    obj1=Point()
+    obj1.draw()
+    obj1.x=12
+    print(obj1.x)
+    obj2=Point()
+    obj2.x=18
+    print(obj2.x)
+    obj2.move()
+    #self represents the instance of the class. By using the “self” keyword we can access the attributes and methods of the class in python. 
+    #It binds the attributes with the given arguments.
+
+    # constructor
+    
