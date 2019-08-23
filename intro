@@ -415,5 +415,33 @@ if stat==True:
      
      
      # exceptions
+     # use try-except-finally
+     # raise keyword helps to raise a exception
      
-     
+     try:
+         age=int(input("Age: "))
+         div=12/age
+         print(age)
+         print(div)
+     except ValueError:
+         print("Invalid Value")
+     except ZeroDivisionError:
+         print("Age cannot be 0")
+     finally:
+         print("ENd of program")
+     # We can use a tuple of values to specify multiple exceptions in an except clause. 
+     try:
+         age=int(input("Age: "))
+         div=12/age
+         print(age)
+         print(div)
+    except (TypeError, ZeroDivisionError):
+        print("Invalid")
+        
+    # raising a error
+    try:
+        a = int(input("Enter a positive integer: "))
+        if a <= 0:
+           raise ValueError("That is not a positive number!")
+    except ValueError as ve:
+        print(ve)
