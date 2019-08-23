@@ -466,4 +466,29 @@ if stat==True:
     #It binds the attributes with the given arguments.
 
     # constructor
+    class Person:
+        def __init__(self,name,age): #  CONSTRUCTOR; note: there is a double __ on each side
+            self.name=name
+            self.age=age
+        def talk(self):
+            print(f'{self.name} Is talking')
+    obj1=Person("Liz",22)
+    obj1.talk()
+    print(obj1.name,obj1.age)
+    obj1.age=23 # updating the value
+    print(obj1.age)
+    
+    # Inheritance
+    class Mammal:
+        def walk(self):
+            print("Walk")
+    class Dog(Mammal):
+        def bark(self):
+            print("barking")
+    class Cat(Mammal):
+         pass # empty class not allowed so just write pass here       
+    dog=Dog()
+    dog.walk()
+    dog.bark()
+            
     
