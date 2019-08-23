@@ -384,3 +384,12 @@ if stat==True:
      intro(lname='Tiwari',fname='Devyanshi')
      intro('Shivi',lname='Tiwari')
      
+     # return statement
+     # by deafult py retuns None
+     # if u add areturn statement then receive that function call in a variable or a print()
+     def sq(number):
+         return number *number
+     s=print(sq(4))
+     
+     
+     
