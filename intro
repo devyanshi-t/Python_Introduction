@@ -386,10 +386,34 @@ if stat==True:
      
      # return statement
      # by deafult py retuns None
-     # if u add areturn statement then receive that function call in a variable or a print()
+     # if u add a return statement then receive that function call in a variable or a print()
      def sq(number):
          return number *number
      s=print(sq(4))
      
+     # re-usable functions
+     # we are reusing the emoji convertor again here but as a reusable function
+     # inputs ,outputs should not be a part odf reusable func ad their format for different sources can differ
+  
+     def emoji_convertor(msg):
+         words=msg.split(' ') # splits on the basis of space
+         emoji={
+             ":-)":"😀",
+             ":-(":"😞"
+            }
+         m=""         
+         for i in words:
+             m=m+emoji.get(i,i)+" "
+         
+         return m
+     
+        
+     # leaving 2 lines   
+     msg=input("your message")
+     result=emoji_convertor(msg)
+     print(result)
+     
+     
+     # exceptions
      
      
