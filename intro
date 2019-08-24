@@ -530,4 +530,21 @@ if stat==True:
        print(random.randint(10,20))# b/w 10 and 20
   
   l=['Devyanshi','Shivi','Mary']
-  print(random.choice(l)) # picks a memeber of the list randomly
+  print(random.choice(l))
+  # picks a memeber of the list randomly
+  
+  
+  # Roll Dice game
+   class Dice:
+       def roll(self,t):
+            temp=(random.choice(t),random.choice(t))
+            return temp
+   
+    
+   t=(1,2,3,4,5,6)
+   obj=Dice()
+   print(obj.roll(t))
+
+
+   # Files and Directories
+       
