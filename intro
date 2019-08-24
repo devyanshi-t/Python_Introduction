@@ -518,6 +518,16 @@ if stat==True:
   l={1,34,56,78,234,89}
   print(findmax.maxno(l))
   
+  # packages are like directory but with a special __init__.py file
+  # import package.module OR from package.module import someFunc OR from package import module
   
-
   
+  # Generating Random Number
+   import random
+   
+   for i in range(3):
+       print(random.random()) # print a random no between 0 and 1
+       print(random.randint(10,20))# b/w 10 and 20
+  
+  l=['Devyanshi','Shivi','Mary']
+  print(random.choice(l)) # picks a memeber of the list randomly
