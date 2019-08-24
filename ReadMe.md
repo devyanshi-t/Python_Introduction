@@ -20,7 +20,6 @@ Python is an interpreted, high-level, general-purpose programming language.<br/>
 ## Nested Loops
  ## Lists
  ## 2D Lists
- ## My Complete Python Course 
 ## List Methods
  ## Tuples
 ##  Unpacking
