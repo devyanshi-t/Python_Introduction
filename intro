@@ -547,4 +547,10 @@ if stat==True:
 
 
    # Files and Directories
-       
+   # pathlib-This module offers classes representing filesystem paths with semantics
+   #appropriate for different operating systems. 
+   #Path classes are divided between pure paths, which provide purely computational operations without I/O, and concrete paths, which inherit from pure paths but also provide I/O operations.
+   from pathlib import Path 
+   path=Path() #focusing on Relative Path instead of Actual path
+   for i in path.glob('*'):# list all the files in current directory
+       print(i)
