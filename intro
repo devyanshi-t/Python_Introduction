@@ -554,3 +554,7 @@ if stat==True:
    path=Path() #focusing on Relative Path instead of Actual path
    for i in path.glob('*'):# list all the files in current directory
        print(i)
+   
+       
+   # pypi.org to get desired packages
+   # use pip to instal the packages    
